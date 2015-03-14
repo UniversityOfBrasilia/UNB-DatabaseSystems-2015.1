@@ -1,5 +1,5 @@
 # SBD
-This repository contains codes relative to: 
+This repository contains content about the course: 
 
 University: (UNB) University Of Brasilia 
 Course: Software Engineer 
