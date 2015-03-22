@@ -4,7 +4,7 @@ import java.io.EOFException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
-import Student.StudentRecord;
+import Product.ProductRecord;
 
 public class ReadRandomFile {
 
@@ -37,27 +37,14 @@ public class ReadRandomFile {
 
 	public void readRecords(){
 
-		StudentRecord record = new StudentRecord();
+		ProductRecord record = new ProductRecord();
 
 		System.out.printf( "\n%-15s"
 				+ "%-15s"
-				+ "%-15s"
-				+ "%-15s"
-				+ "%-25s"
-				+ "%-15s"
-				+ "%-15s"
-				+ "%-15s"
-				+ "%-15s"
-				+ "%10s\n", 
-				"CPF",
-				"Nome", 
-				"Matricula", 
-				"Idade",
-				"Data de Nascimento",
-				"Sexo","Endereço",
-				"Telefone",
-				"Nome do Pai",
-				"Nome da Mãe" );
+				+ "%-15s\n", 
+				"Descrição",
+				"ID", 
+				"Quantidade");
 
 		try{
 
@@ -66,29 +53,15 @@ public class ReadRandomFile {
 				do{
 					record.read(input);
 
-				}while(record.getStudentId() == 0);
+				}while(record.getProductId() == 0);
 
 				
 				System.out.printf("%-15s"
-						+ "%-12s"
 						+ "%-15d"
-						+ "%-15d"
-						+ "%-25s"
-						+ "%-12s"
-						+ "%-12s"
-						+ "%-12s"
-						+ "%-12s"
-						+ "%12s\n",
-						record.getCpf(),
-						record.getName(),
-						record.getStudentId(), 
-						record.getAge(),
-						record.getBirthDate(),
-						record.getGender(),
-						record.getAdress(),
-						record.getPhoneNumber(),
-						record.getFathersName(),
-						record.getMothersName() );
+						+ "%-15d\n",
+						record.getDescription(),
+						record.getProductId(), 
+						record.getAmount());
 
 			}
 

@@ -2,7 +2,8 @@ package FileManipulation;
 
 import java.io.IOException;
 import java.io.RandomAccessFile;
-import Student.StudentRecord;
+
+import Product.ProductRecord;
 
 public class CreateRandomFile {
 
@@ -15,7 +16,7 @@ public class CreateRandomFile {
 			
 			file = new RandomAccessFile(fileName,"rw");
 			
-			StudentRecord blankRecord = new StudentRecord();
+			ProductRecord blankRecord = new ProductRecord();
 			
 			long numberOfRecords = 10;
 
